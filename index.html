@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-    <link href="
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,13 +14,14 @@
     <title>MeteoApp</title>
   </head>
   <body>
-    <div class="weather-app">
+    <div class="weather-app" id="search-form">
       <header>
         <form class="search-form">
           <input
             type="search"
             placeholder="Enter a city..."
             required
+            id="search-form-input"
             class="search-form-input"
           />
 
@@ -30,7 +30,7 @@
       </header>
       <div class="weather-app-data">
         <div>
-          <h1 class="weather-app-city">Paris</h1>
+          <h1 class="weather-app-city" id="city">Paris</h1>
           <p class="weather-app-detail">
             Tuesday 14:45, scattered clouds
             <br />Humidity: <strong>6%</strong>, Wind:<strong>13,4km/h</strong>
@@ -58,5 +58,6 @@
         <a href="https://weathermeteoforecast.netlify.app/">Netlify</a>
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>

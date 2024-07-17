@@ -81,8 +81,8 @@ main {
   font-weight: bold;
 }
 .weather-app-temperature-icon {
-  font-size: 44px;
-  margin-top: 22px;
+  width: 88px;
+  height: 88px;
 }
 .weather-app-unit {
   margin-top: 16px;
@@ -92,7 +92,7 @@ main {
 .weather-app-max-min {
   display: flex;
   font-size: 20px;
-  margin-left: 70px;
+  margin-left: 80px;
 }
 .weather-app-max {
   font-size: 28px;

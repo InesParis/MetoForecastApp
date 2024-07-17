@@ -1,9 +1,11 @@
 body {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/846/original/kenrick-mills-1h2Pg97SXfA-unsplash.jpg?1721213318");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover !important;
-  background-color: #101a1b;
+  background: linear-gradient(
+    109.6deg,
+    rgb(135, 168, 254) 11.2%,
+    rgb(254, 165, 197) 100.2%
+  );
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/834/original/eberhard-grossgasteiger-J9NDmBVhN04-unsplash.jpg?1721212122");
+
   .merriweather-light {
     font-family: "Merriweather", serif;
     font-weight: 300;

@@ -8,6 +8,7 @@ function refreshWeather(response) {
   let windElement = document.querySelector("#wind");
   let timeDayElement = document.querySelector("#time-day");
   let date = new Date(response.data.time * 1000);
+
   let currentWeatherIconElement = document.querySelector(
     "#current-weather-icon"
   );
@@ -20,7 +21,20 @@ function refreshWeather(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeDayElement.innerHTML = formatDate(date);
   currentWeatherIconElement.innerHTML = `<img src="${response.data.condition.icon_url}"class="weather-app-temperature-icon"/>`;
+
+  forecastCityWeek(response.data.city);
 }
+function forecastWeek(response) {
+  let maxTemperatureElement = document.querySelector("#max-temperature");
+  let minTemperatureElement = document.querySelector("#min-temperature");
+  maxTemperatureElement.innerHTML = Math.round(
+    response.data.daily[0].temperature.maximum
+  );
+  minTemperatureElement.innerHTML = Math.round(
+    response.data.daily[0].temperature.minimum
+  );
+}
+
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
@@ -57,3 +71,10 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Madrid");
+
+function forecastCityWeek(city) {
+  let apiKeyForecast = "4f2360cc5d2fbf9f02a9o90ddad3f50t";
+  let apiUrlWeek = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKeyForecast}`;
+
+  axios.get(apiUrlWeek).then(forecastWeek);
+}

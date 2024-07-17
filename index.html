@@ -17,19 +17,40 @@
   <body>
     <div class="weather-app">
       <header>
-        <input type="search" placeholder="Enter a city..." required />
-        <input type="submit" value="Search" />
-      </header>
-      <div>
-        <h1>Paris</h1>
-        <div>☀️24ºC</div>
-        <p>30º ↑ 15º ↓</p>
-        <p>
-          Tuesday 14:45, scattered clouds
-          <br />Humidity: 6%, Wind: 13,4km/h
-        </p>
-      </div>
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form-input"
+          />
 
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
+      <div class="weather-app-data">
+        <div>
+          <h1 class="weather-app-city">Paris</h1>
+          <p class="weather-app-detail">
+            Tuesday 14:45, scattered clouds
+            <br />Humidity: <strong>6%</strong>, Wind:<strong>13,4km/h</strong>
+          </p>
+        </div>
+
+        <main>
+          <div class="weather-app-temperature-container">
+            <div class="weather-app-temperature-icon">☀️</div>
+            <div class="weather-app-temperature">24</div>
+            <div class="weather-app-unit">ºC</div>
+          </div>
+          <div class="weather-app-max-min">
+            <div class="weather-app-max">30º</div>
+            <div class="weather-app-max-icon">↑</div>
+            <div class="weather-app-min">15º</div>
+            <div class="weather-app-min-icon">↓</div>
+          </div>
+        </main>
+      </div>
       <footer>
         Coded by <a href="https://github.com/InesParis">Inés Paris</a> hosted on
         <a href="https://github.com/InesParis/MetoForecastApp">GitHub</a> and
